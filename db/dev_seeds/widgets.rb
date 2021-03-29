@@ -9,16 +9,16 @@ section "Creating header and cards for the homepage" do
 
   Widget::Card.create!(
     title_en: "CONSUL",
-    title_es: "CONSUL",
+    title_es: "Ximena Peredo",
 
     description_en: "Free software for citizen participation.",
-    description_es: "Software libre para la participación ciudadana.",
+    description_es: "Creemos en conjunto mi campaña por la Diputación del Distrito 18 de Nuevo León.",
 
     link_text_en: "More information",
     link_text_es: "Más información",
 
     label_en: "Welcome to",
-    label_es: "Bienvenido a",
+    label_es: "Plataforma participativa de",
 
     link_url: "http://consulproject.org/",
     header: true,
