@@ -8,19 +8,19 @@ section "Creating header and cards for the homepage" do
   end
 
   Widget::Card.create!(
-    title_en: "CONSUL",
+    title_en: "Ximena Peredo",
     title_es: "Ximena Peredo",
 
     description_en: "Free software for citizen participation.",
-    description_es: "Creemos en conjunto mi campaña por la Diputación del Distrito 18 de Nuevo León.",
+    description_es: "Creemos en conjunto una campaña por la Diputación del Distrito 18 de Nuevo León.",
 
     link_text_en: "More information",
     link_text_es: "Más información",
 
-    label_en: "Welcome to",
+    label_en: "Direct democarcy platform",
     label_es: "Plataforma participativa de",
 
-    link_url: "http://consulproject.org/",
+    link_url: "http://ximenaperedo.com.mx",
     header: true,
     image_attributes: create_image_attachment("header")
   )
