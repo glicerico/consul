@@ -80,9 +80,9 @@ class Setting < ApplicationRecord
     def defaults
       {
         "feature.featured_proposals": nil,
-        "feature.facebook_login": true,
-        "feature.google_login": true,
-        "feature.twitter_login": true,
+        "feature.facebook_login": false,
+        "feature.google_login": false,
+        "feature.twitter_login": false,
         "feature.wordpress_login": false,
         "feature.public_stats": true,
         "feature.signature_sheets": true,
@@ -159,7 +159,7 @@ class Setting < ApplicationRecord
         "youtube_handle": nil,
         "url": "http://example.com", # Public-facing URL of the app.
         # CONSUL installation's organization name
-        "org_name": "CONSUL",
+        "org_name": "Ximena",
         "meta_title": nil,
         "meta_description": nil,
         "meta_keywords": nil,
