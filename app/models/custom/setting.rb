@@ -103,7 +103,7 @@ class Setting < ApplicationRecord
         "feature.sdg": false,
         "homepage.widgets.feeds.debates": false,
         "homepage.widgets.feeds.processes": true,
-        "homepage.widgets.feeds.proposals": true,
+        "homepage.widgets.feeds.proposals": false,
         # Code to be included at the top (inside <body>) of every page
         "html.per_page_code_body": "",
         # Code to be included at the top (inside <head>) of every page (useful for tracking)
@@ -112,10 +112,10 @@ class Setting < ApplicationRecord
         "map.longitude": 100.3853,
         "map.zoom": 10,
         "process.debates": false,
-        "process.proposals": true,
+        "process.proposals": false,
         "process.polls": false,
         "process.budgets": false,
-        "process.legislation": false,
+        "process.legislation": true,
         "proposals.successful_proposal_id": nil,
         "proposals.poll_short_title": nil,
         "proposals.poll_description": nil,
@@ -145,7 +145,7 @@ class Setting < ApplicationRecord
         "max_votes_for_debate_edit": 1000,
         "max_votes_for_proposal_edit": 1000,
         "comments_body_max_length": 1000,
-        "proposal_code_prefix": "CONSUL",
+        "proposal_code_prefix": "xp18",
         "votes_for_proposal_success": 10000,
         "months_to_archive_proposals": 12,
         # Users with this email domain will automatically be marked as level 1 officials
