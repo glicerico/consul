@@ -204,13 +204,17 @@ $table-header:   #ecf1f6;
       line-height: $line-height * 2;
 
       .button {
+        @include brand-text;
         background: #fff;
-        color: $brand;
       }
     }
   }
 
   table {
+
+    caption {
+      @include element-invisible;
+    }
 
     thead {
 
@@ -673,7 +677,7 @@ code {
     display: block;
 
     &.is-active {
-      color: $brand;
+      @include brand-text;
       font-weight: bold;
       text-decoration: underline;
     }
@@ -1157,38 +1161,6 @@ table {
 
   .button {
     margin-top: $line-height / 2;
-  }
-}
-
-.budget-phase-enabled {
-  font-weight: bold;
-  padding-left: rem-calc(20);
-  position: relative;
-  text-decoration: none;
-
-  &.enabled::before,
-  &.disabled::before {
-    font-family: "icons";
-    left: 0;
-    position: absolute;
-  }
-
-  &.enabled {
-    color: $check;
-
-    &::before {
-      color: $check;
-      content: "\6c";
-    }
-  }
-
-  &.disabled {
-    color: #000;
-
-    &::before {
-      color: #000;
-      content: "\76";
-    }
   }
 }
 
