@@ -187,13 +187,16 @@ describe "Legislation" do
         end
       end
 
-      scenario "show additional info button" do
+      scenario "show additional info button", :js do
         process = create(:legislation_process, additional_info: "Text for additional info of the process")
 
         visit legislation_process_path(process)
 
-        expect(page).to have_content("Additional information")
-        expect(page).to have_content("Text for additional info of the process")
+        expect(page).not_to have_content "Text for additional info of the process"
+
+        click_button "Additional information"
+
+        expect(page).to have_content "Text for additional info of the process"
       end
 
       scenario "do not show additional info button if it is empty" do
@@ -201,7 +204,7 @@ describe "Legislation" do
 
         visit legislation_process_path(process)
 
-        expect(page).not_to have_content("Additional information")
+        expect(page).not_to have_button "Additional information"
       end
 
       scenario "Shows another translation when the default locale isn't available" do
@@ -382,16 +385,6 @@ describe "Legislation" do
         visit legislation_process_proposals_path(process)
 
         expect(page).to have_content("There are no proposals")
-      end
-
-      scenario "create proposal button redirects to register path if user is not logged in" do
-        process = create(:legislation_process, :in_proposals_phase)
-
-        visit legislation_process_proposals_path(process)
-        click_link "Create a proposal"
-
-        expect(page).to have_current_path new_user_session_path
-        expect(page).to have_content "You must sign in or register to continue"
       end
 
       include_examples "not published permissions", :legislation_process_proposals_path
